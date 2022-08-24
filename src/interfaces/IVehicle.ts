@@ -1,14 +1,10 @@
 import { Request } from 'express';
 import { z } from 'zod';
 
-const MIN_STRING_LENGTH = 3;
-const MIN_VEHICLE_YEAR = 1900;
-const MAX_VEHICLE_YEAR = 2022;
-
 const vehicleZodSchema = z.object({
-  model: z.string().min(MIN_STRING_LENGTH),
-  year: z.number().min(MIN_VEHICLE_YEAR).max(MAX_VEHICLE_YEAR),
-  color: z.string().min(MIN_STRING_LENGTH),
+  model: z.string().min(3),
+  year: z.number().min(1900).max(2022),
+  color: z.string().min(3),
   status: z.boolean().optional(),
   buyValue: z.number().int(),
 });
