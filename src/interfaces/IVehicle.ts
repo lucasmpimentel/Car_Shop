@@ -15,4 +15,4 @@ interface RequestVehicle extends Request {
   body: IVehicle,
 }
 
-export { IVehicle, vehicleZodSchema, RequestVehicle }; 
+export { IVehicle, vehicleZodSchema, RequestVehicle };
